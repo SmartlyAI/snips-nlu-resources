@@ -14,14 +14,16 @@ for r in bundles:
     lang = form[0]
     vers = form[1]
     for x in resources:
-        if str(x) in str(lang):
+        if str(lang) in str(x):
             print(x, r)
             filer = Path(f"{str(r)}/snips_nlu_{lang}/snips_nlu_{lang}-{vers}")
             for v in x.glob('*'):
                 dest = filer / v.name
                 if v.is_dir():
                     try: shutil.copytree(v, dest, symlinks=True)
-                    except Exception as e: print(str(e))
+                    except Exception as e: print('IS A DIR', str(e))
                 else: 
                     try: shutil.copy2(v, dest, follow_symlinks=True)
-                    except Exception as e: print(str(e))
+                    except Exception as e: print('NOT A DIR', str(e))
+        
+        else: print('not found', x, str(lang))

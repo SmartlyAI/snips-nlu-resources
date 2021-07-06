@@ -1,0 +1,6 @@
+0000000000000000000000000000000000000000 c8af351e43f6ddaa4f6772b98b67dec161d264d2 Elvis MBONING <elvis.mboningtchiaze@orange.com> 1617726668 +0200	clone: from git@github.com:snipsco/snips-nlu-resources.git
+c8af351e43f6ddaa4f6772b98b67dec161d264d2 d1ca61cb962b4ee9ad5dfa57b9f181689b93acac Elvis MBONING <elvis.mboningtchiaze@orange.com> 1618008469 +0200	commit: re-organize snips resource content
+d1ca61cb962b4ee9ad5dfa57b9f181689b93acac d1ca61cb962b4ee9ad5dfa57b9f181689b93acac Elvis MBONING <elvis.mboningtchiaze@orange.com> 1618008516 +0200	checkout: moving from master to v1
+d1ca61cb962b4ee9ad5dfa57b9f181689b93acac 121c98c7f33005416e6ca88eb1919dfe8e025438 Elvis MBONING <elvis.mboningtchiaze@orange.com> 1618008812 +0200	pull res master: Merge made by the 'recursive' strategy.
+121c98c7f33005416e6ca88eb1919dfe8e025438 d80732738a6ade490e03ff4439926dd2e2337a2a Elvis MBONING <elvis.mboningtchiaze@orange.com> 1618045240 +0200	commit: add script for symlink
+d80732738a6ade490e03ff4439926dd2e2337a2a d000764a8e7fe197657a8f41de2ed5f0815ca7b0 Elvis MBONING <elvis.mboningtchiaze@orange.com> 1625511006 +0200	commit: add DELA and GDN corpora to french resource

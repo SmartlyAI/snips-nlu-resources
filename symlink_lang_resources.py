@@ -20,10 +20,13 @@ __version__ =  '0.0'
 from pathlib import Path
 import shutil
 import importlib
+import re
+import os
 
 # get current languages resources
 current_path = Path(__file__).parent
-resources = [x for x in current_path.glob('*') if not str(x).startswith('b')]
+resources = [x for x in current_path.glob('*') 
+            if not re.search(r'(.bundles|\.py|\.rst|license|.git)$', str(x), re.I)]
 
 # Find Snips package name and path
 name = 'snips-nlu'.replace("-", "_")
@@ -33,10 +36,14 @@ resource_langs = pkg_name / "data"
 
 # Symlink language to resource data
 for lang in resources:
-    if lang.is_dir() and not str(lang).startswith('.'):
+    if lang.is_dir():
         dest_pkg_lang = resource_langs / lang.name
+        if dest_pkg_lang.exists() or dest_pkg_lang.is_symlink(): 
+            try: os.removedirs(dest_pkg_lang)
+            except: os.unlink(dest_pkg_lang)
         try: 
-            lang.symlink_to(dest_pkg_lang)
+            #dest_pkg_lang.symlink_to(lang.absolute())
+            os.symlink(lang.absolute(), dest_pkg_lang)
             print(f"Successfully symlink resource: {lang} --> {dest_pkg_lang} ")
         except Exception as e: print(str(e))
         

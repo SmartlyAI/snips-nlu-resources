@@ -1,0 +1,17 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = git@github.com:snipsco/snips-nlu-resources.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[remote "res"]
+	url = git@github.com:SmartlyAI/snips-nlu-resources.git
+	fetch = +refs/heads/*:refs/remotes/res/*
+[remote "elvis"]
+	url = git@github.com:Levis0045/snips-nlu-resource-smartly.git
+	fetch = +refs/heads/*:refs/remotes/elvis/*
