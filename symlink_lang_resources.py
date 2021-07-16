@@ -25,8 +25,7 @@ import os
 
 # get current languages resources
 current_path = Path(__file__).parent
-resources = [x for x in current_path.glob('*') 
-            if not re.search(r'(.bundles|\.py|\.rst|license|.git)$', str(x), re.I)]
+resources = [x for x in current_path.glob('source/*')]
 
 # Find Snips package name and path
 name = 'snips-nlu'.replace("-", "_")
