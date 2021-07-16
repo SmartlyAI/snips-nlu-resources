@@ -6,7 +6,7 @@ import shutil
 
 current_path = Path(__file__).parent
 bundles = current_path / "bundles"
-resources = [x for x in current_path.glob('*') if not str(x).startswith('b')]
+resources = [x for x in current_path.glob('source/*') if not str(x).startswith('b')]
 bundles = bundles.glob('*')
 
 for r in bundles:

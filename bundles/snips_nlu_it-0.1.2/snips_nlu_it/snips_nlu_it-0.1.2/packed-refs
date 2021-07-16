@@ -1,6 +1,0 @@
-# pack-refs with: peeled fully-peeled sorted 
-48f2e0e89743b87fb82040686db4f353e2de68f9 refs/remotes/origin/fix/german-stopwords
-c8af351e43f6ddaa4f6772b98b67dec161d264d2 refs/remotes/origin/master
-201759cf0391d7b2061d2f83bfc7577b553a990c refs/remotes/origin/task/clusters-from-spacy
-c340bb8cae77957fee704c000426399cffbfe113 refs/remotes/origin/task/readme
-efd91aa672ce3bbf1bfe6aede2ffe38058dba524 refs/tags/snips_nlu_de-0.2.2
