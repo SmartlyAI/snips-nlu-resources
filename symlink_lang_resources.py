@@ -33,6 +33,9 @@ pkg  = importlib.import_module(name)
 pkg_name = Path(pkg.__file__).parent
 resource_langs = pkg_name / "data"
 
+for lang in resource_langs.glob('*'):
+    if not lang.is_symlink(): shutil.rmtree(lang)
+
 # Symlink language to resource data
 for lang in resources:
     if lang.is_dir():
